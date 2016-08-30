@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NIMGlobalDefs.h"
 #import "NIMSession.h"
+#import "NIMLoginClient.h"
 #import "NIMImageObject.h"
 #import "NIMLocationObject.h"
 #import "NIMAudioObject.h"
@@ -207,6 +208,12 @@ typedef NS_ENUM(NSInteger, NIMMessageAttachmentDownloadState){
  *  @discussion 当发送者是自己时,这个值可能为空,这个值表示的是发送者当前的昵称,而不是发送消息时的昵称
  */
 @property (nullable,nonatomic,copy,readonly)         NSString *senderName;
+
+
+/**
+ *  发送者客户端类型
+ */
+@property (nonatomic,assign,readonly)   NIMLoginClientType senderClientType;
 @end
 
 NS_ASSUME_NONNULL_END
